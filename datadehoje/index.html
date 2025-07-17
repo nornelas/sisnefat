@@ -1,1 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Data de Hoje em JSON</title>
+</head>
+<body>
+  <h1>Data de Hoje (JSON)</h1>
+  <pre id="json"></pre>
+
+  <script>
+    const dataAtual = new Date();
+    const respostaJSON = {
+      data: dataAtual.toISOString(),
+      local: "Buarcos e São Julião, Portugal"
+    };
+
+    document.getElementById("json").textContent = JSON.stringify(respostaJSON, null, 2);
+  </script>
+</body>
+</html>
 
